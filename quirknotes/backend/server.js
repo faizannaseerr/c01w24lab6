@@ -99,7 +99,6 @@ app.delete("/deleteNote/:noteId", express.json(), async (req, res) => {
     });
 
     if (data.deletedCount === 0) {
-      console.log("HELLLOO");
       return res
         .status(404)
         .json({ error: "Unable to find note with given ID." });
